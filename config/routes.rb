@@ -1,5 +1,5 @@
 SimpleApp::Application.routes.draw do
-  get "users/new"
+  resources :users
 
   root to: 'static_pages#home'
 
@@ -11,7 +11,7 @@ SimpleApp::Application.routes.draw do
 
   match '/sign_in', to: 'static_pages#sign_in'
 
-  match '/sign_up', to: 'static_pages#sign_up'
+  match '/sign_up', to: 'users#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
