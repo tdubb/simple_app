@@ -1,21 +1,4 @@
-<% if signed_in? %>
-	<div class="row">
-		<aside class="span4">
-			<section>
-				<%= render 'shared/user_info' %>
-			</section>
-			<section>
-
-				<%= render 'shared/micropost_form' %>
-			</section>
-		</aside>
-		<div class="span8">
-			<h3>Micropost Feed</h3>
-			<%= render 'shared/feed' %>
-		</div>
-	</div>
-<% else %>
-	<div class="center hero-unit">
+<div class="center hero-unit">
 
 		<h1 style="text-align:center;">Hi</h1>
  		<h2 style="text-align:center;"><img src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-ash3/33912_1681786525295_6578434_n.jpg" width=400px height=300px>
@@ -34,5 +17,3 @@
  		<p>And I thought creating a website to document this trip might be a fun way to learn so here it goes</p>
 		 </h2> 	
 </div>
-
-<% end %>
