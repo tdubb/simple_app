@@ -60,14 +60,15 @@ describe "Authentication" do
       describe "in the Microposts controller" do 
 
         describe "submitting to the create action" do 
-          before { post Microposts_path }
-          specify { response.should redirect_to(signin_path) }
+          before { post microposts_path }
+          specify { response.should redirect_to(sign_in_path) }    
         end
 
         describe "submitting to the destroy action" do 
-          before { delete Microposts_path(FactoryGirl.create(:micropost)) }
-          specity { response.should redirect_to(signin_path) }
-        end     
+          before { delete micrposts_path(FactoryGirl.create(:micropost)) }
+          specify { response.should redirect_to(sign_in_path) }
+        end
+      end  
     end
       
     describe "in the Users controller" do 
@@ -119,3 +120,4 @@ describe "Authentication" do
 end
 
   
+
